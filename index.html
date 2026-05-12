@@ -28,10 +28,12 @@
             align-items: center;
         }
         .mini-cat-img {
-            width: 100px; /* 고양이 크기 */
-            height: auto;
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
-        }
+    width: 100px;
+    height: 140px; /* 높이를 지정해서 체크무늬 하단을 잘라냅니다 */
+    object-fit: cover; /* 이미지를 영역에 꽉 채웁니다 */
+    object-position: top; /* 고양이 머리(위쪽)를 기준으로 맞춥니다 */
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
         .mini-status-label {
             font-size: 11px;
             background: rgba(0,0,0,0.7);
