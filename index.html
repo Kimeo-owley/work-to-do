@@ -187,9 +187,59 @@ body{font-family:'Inter','Noto Sans KR',sans-serif;background:var(--bg);color:va
   .summary-row{grid-template-columns:repeat(2,1fr)}
   .tab{font-size:11px;padding:8px 2px}
   .add-todo-row2{flex-direction:column;align-items:stretch}
+}/* --- 독바 고양이 전용 스타일 --- */
+#mini-cat-dock {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 400px;
+    z-index: 9999;
+    pointer-events: none; /* 고양이 뒤쪽 클릭 가능하게 함 */
+}
+
+.mini-cat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.mini-cat-img {
+    width: 80px; /* 고양이 크기 (취향껏 조절) */
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+}
+
+.mini-status-label {
+    font-size: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
 }
 </style>
-</head>
+</head><div id="mini-cat-dock">
+    <div class="mini-cat-item">
+        <span class="mini-status-label">치치 활동 중</span>
+        <img src="qiqi.png" class="mini-cat-img" alt="치치">
+    </div>
+    <div class="mini-cat-item">
+        <span class="mini-status-label">찌루 휴식 중</span>
+        <img src="zziru.png" class="mini-cat-img" alt="찌루">
+    </div>
+    <div class="mini-cat-item">
+        <span class="mini-status-label">마루 활동 중</span>
+        <img src="maru.png" class="mini-cat-img" alt="마루">
+    </div>
+</div>
 <body>
 <div class="shell">
   <div class="app-header" style="display:flex;align-items:center;justify-content:space-between">
